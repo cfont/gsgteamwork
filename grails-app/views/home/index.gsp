@@ -14,16 +14,16 @@
     <h2>Messages</h2>
     <g:if test="${flash.toUser}">
       <div id="userMesage" class="info">
-        ${flash.toUser}
+        <g:message code="posting.new" args="${[flash.toUser]}" encodeAs="HTML" />
       </div>
     </g:if>
     <g:each in="${messages}" var="message">
       <div class="amessage">
         <div class="messagetitle">
-          ${message.title}
+          <g:message code="message.title" args="${[message.title]}" encodeAs="HTML"/>
         </div>
         <div class="messagebody">
-          ${message.detail}
+          <g:message code="message.detail" args="${[message.detail]}" encodeAs="HTML"/>
         </div>
       </div>
     </g:each>
