@@ -6,6 +6,11 @@
     <title>Home</title>
   </head>
   <body>
+    <div class="newactions">
+      <span class="newmessage">
+        <g:link controller="message" action="create">Post Message</g:link>
+      </span>
+    </div>
     <h2>Messages</h2>
     <g:if test="${flash.toUser}">
       <div id="userMesage" class="info">
